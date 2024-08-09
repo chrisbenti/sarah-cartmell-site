@@ -1,6 +1,7 @@
 import { css } from '@emotion/css'
 import photo from './assets/sarah.jpg'
 import { BIO, DESCRIPTION, NAME } from './data'
+import { SMALL_SCREEN_SIZE } from './constants'
 
 export const Introduction: React.FC = () => (
     <div
@@ -28,9 +29,12 @@ export const Introduction: React.FC = () => (
             })}
         >
             <div
-                className={css({
-                    fontSize: '4em',
-                })}
+                className={css`
+                    font-size: 4em;
+                    @media (max-width: ${SMALL_SCREEN_SIZE}) {
+                        font-size: 3.5em;
+                    }
+                `}
             >
                 {NAME}
             </div>
