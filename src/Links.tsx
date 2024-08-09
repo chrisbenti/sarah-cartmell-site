@@ -7,7 +7,7 @@ const Link: React.FC<{ name: string; url: string }> = ({ name, url }) => (
         className={css({
             border: '2px solid black',
             padding: '1em',
-            width: '100%',
+            width: 'calc(100% - 2em - 4px)', // Sill calc hack
             color: 'black',
             textDecoration: 'none',
             '&:hover': {
