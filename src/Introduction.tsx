@@ -1,21 +1,27 @@
 import { css } from '@emotion/css'
 import photo from './assets/sarah.jpg'
 import { BIO, DESCRIPTION, NAME } from './data'
-import { SMALL_SCREEN_SIZE } from './constants'
+import { MEDIUM_SCREEN_SIZE, SMALL_SCREEN_SIZE } from './constants'
 
 export const Introduction: React.FC = () => (
     <div
         className={css({
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
             gap: '1em',
+            [`@media (max-width: ${SMALL_SCREEN_SIZE})`]: {
+                flexDirection: 'column',
+            },
         })}
     >
         <img
             className={css({
                 maxWidth: '300px',
                 borderRadius: '100%',
+                [`@media (max-width: ${MEDIUM_SCREEN_SIZE})`]: {
+                    maxWidth: '200px',
+                },
             })}
             src={photo}
             alt="Sarah Cartmell"
@@ -23,15 +29,18 @@ export const Introduction: React.FC = () => (
         <div
             className={css({
                 display: 'flex',
-                gap: '.5em',
+                gap: '1em',
                 flexDirection: 'column',
-                textAlign: 'center',
+                textAlign: 'left',
+                [`@media (max-width: ${SMALL_SCREEN_SIZE})`]: {
+                    textAlign: 'center',
+                },
             })}
         >
             <div
                 className={css`
                     font-size: 4em;
-                    @media (max-width: ${SMALL_SCREEN_SIZE}) {
+                    @media (max-width: ${MEDIUM_SCREEN_SIZE}) {
                         font-size: 3.5em;
                     }
                 `}

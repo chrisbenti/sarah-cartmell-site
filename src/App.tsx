@@ -2,6 +2,7 @@ import { css } from '@emotion/css'
 import { Links } from './Links'
 import { Introduction } from './Introduction'
 import { Social } from './Social'
+import { SMALL_SCREEN_SIZE } from './constants'
 
 function App() {
     return (
@@ -23,8 +24,11 @@ function App() {
                     alignItems: 'center',
                     gap: '2em',
                     maxWidth: '800px',
-                    padding: '1em',
+                    padding: '2em',
                     margin: 'auto',
+                    [`@media (max-width: ${SMALL_SCREEN_SIZE})`]: {
+                        padding: '4em 2em',
+                    },
                 })}
             >
                 <Introduction />
