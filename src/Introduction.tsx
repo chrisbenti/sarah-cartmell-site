@@ -1,5 +1,6 @@
 import { css } from '@emotion/css'
 import photo from './assets/sarah.jpg'
+import { BIO, DESCRIPTION, NAME } from './data'
 
 export const Introduction: React.FC = () => (
     <div
@@ -31,7 +32,7 @@ export const Introduction: React.FC = () => (
                     fontSize: '4em',
                 })}
             >
-                Sarah Cartmell
+                {NAME}
             </div>
             <div
                 className={css({
@@ -39,19 +40,14 @@ export const Introduction: React.FC = () => (
                     fontWeight: 'bold',
                 })}
             >
-                PhD Student, Graduate School of Education @ Rutgers University
+                {DESCRIPTION}{' '}
             </div>
             <div
                 className={css({
                     fontSize: '1em',
                 })}
             >
-                Sarah Cartmell, MEd, is a PhD student at Rutgers University in
-                New Jersey. She is currently researching fostering the
-                mathematical understanding of students from diverse backgrounds
-                through rich problem-solving tasks. Her focus on collaborative
-                learning spaces is motivated by her seven years of experience
-                teaching mathematics at the middle school level.
+                {BIO}
             </div>
         </div>
     </div>

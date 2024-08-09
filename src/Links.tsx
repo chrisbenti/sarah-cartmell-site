@@ -1,15 +1,5 @@
 import { css } from '@emotion/css'
-
-const LinkData: { name: string; url: string }[] = [
-    {
-        name: 'Resume',
-        url: 'https://docs.google.com/document/d/1IDcC2engyQOd2iCKzTNOU6HBBdGFEPc5/edit?usp=sharing&ouid=104181975737133773165&rtpof=true&sd=true ',
-    },
-    {
-        name: 'Curriculum Vitae',
-        url: 'https://docs.google.com/document/d/1huDRuQfp-JxLvGDYeaUKjsPTv5x3454g4UOFlKKdk9o/edit?usp=sharing ',
-    },
-]
+import { LINK_DATA } from './data'
 
 const Link: React.FC<{ name: string; url: string }> = ({ name, url }) => (
     <a
@@ -41,7 +31,7 @@ export const Links: React.FC = () => {
                 maxWidth: '300px',
             })}
         >
-            {LinkData.map((link) => (
+            {LINK_DATA.map((link) => (
                 <Link key={link.name} name={link.name} url={link.url} />
             ))}
         </div>
