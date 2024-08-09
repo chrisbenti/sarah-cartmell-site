@@ -10,13 +10,19 @@ export const SOCIAL_LINKS = [
     'https://www.instagram.com/Mrs_Cartmell/',
 ]
 
+const googleDocPDF = (id: string) =>
+    `https://docs.google.com/viewer?url=` +
+    encodeURI(
+        `https://docs.google.com/document/d/${id}/export?format=pdf&attachment=false`
+    )
+// `https://docs.google.com/document/d/${id}/preview`
 export const LINK_DATA: { name: string; url: string }[] = [
     {
         name: 'Resume',
-        url: 'https://docs.google.com/document/d/1IDcC2engyQOd2iCKzTNOU6HBBdGFEPc5/edit?usp=sharing&ouid=104181975737133773165&rtpof=true&sd=true ',
+        url: googleDocPDF('1IDcC2engyQOd2iCKzTNOU6HBBdGFEPc5'),
     },
     {
         name: 'Curriculum Vitae',
-        url: 'https://docs.google.com/document/d/1huDRuQfp-JxLvGDYeaUKjsPTv5x3454g4UOFlKKdk9o/edit?usp=sharing ',
+        url: googleDocPDF('1huDRuQfp-JxLvGDYeaUKjsPTv5x3454g4UOFlKKdk9o'),
     },
 ]

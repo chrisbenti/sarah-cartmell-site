@@ -4,6 +4,7 @@ import { LINK_DATA } from './data'
 const Link: React.FC<{ name: string; url: string }> = ({ name, url }) => (
     <a
         href={url}
+        target="_blank"
         className={css({
             border: '2px solid black',
             padding: '1em',
