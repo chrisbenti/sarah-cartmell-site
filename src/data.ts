@@ -11,11 +11,7 @@ export const SOCIAL_LINKS = [
 ]
 
 const googleDocPDF = (id: string) =>
-    `https://docs.google.com/viewer?url=` +
-    encodeURI(
-        `https://docs.google.com/document/d/${id}/export?format=pdf&attachment=false`
-    )
-// `https://docs.google.com/document/d/${id}/preview`
+    `https://docs.google.com/document/d/${id}/preview`
 export const LINK_DATA: { name: string; url: string }[] = [
     {
         name: 'Resume',
