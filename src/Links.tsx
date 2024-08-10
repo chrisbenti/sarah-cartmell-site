@@ -1,22 +1,9 @@
 import { css } from '@emotion/css'
 import { LINK_DATA } from './data'
+import { ButtonStyle } from './Button'
 
 const Link: React.FC<{ name: string; url: string }> = ({ name, url }) => (
-    <a
-        href={url}
-        target="_blank"
-        className={css({
-            border: '2px solid black',
-            padding: '1em',
-            width: 'calc(100% - 2em - 4px)', // Sill calc hack
-            color: 'black',
-            textDecoration: 'none',
-            '&:hover': {
-                backgroundColor: 'black',
-                color: 'white',
-            },
-        })}
-    >
+    <a href={url} target="_blank" className={css([ButtonStyle])}>
         {name}
     </a>
 )

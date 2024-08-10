@@ -5,7 +5,7 @@ export const BIO =
     'Sarah Cartmell, MEd, is a PhD student at Rutgers University in New Jersey. She is currently researching fostering the mathematical understanding of students from diverse backgrounds through rich problem-solving tasks. Her focus on collaborative learning spaces is motivated by her seven years of experience teaching mathematics at the middle school level.'
 
 export const SOCIAL_LINKS = [
-    'mailto:scartmell94@gmail.com',
+    'scartmell94@gmail.com',
     'https://www.linkedin.com/in/sarah-cartmell-6774a6114/',
     'https://www.instagram.com/Mrs_Cartmell/',
 ]
