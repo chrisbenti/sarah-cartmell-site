@@ -21,4 +21,8 @@ export const LINK_DATA: { name: string; url: string }[] = [
         name: 'Curriculum Vitae',
         url: googleDocPDF('1huDRuQfp-JxLvGDYeaUKjsPTv5x3454g4UOFlKKdk9o'),
     },
+    {
+        name: 'NCTM 2024 Slides',
+        url: 'https://drive.google.com/file/d/1M-FKHRamZ1B37iuWBD4dW4THOj4NL7Yn/view'
+    },
 ]
