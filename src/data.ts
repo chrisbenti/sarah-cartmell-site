@@ -22,7 +22,15 @@ export const LINK_DATA: { name: string; url: string }[] = [
         url: googleDocPDF('1huDRuQfp-JxLvGDYeaUKjsPTv5x3454g4UOFlKKdk9o'),
     },
     {
+        name: 'Google Scholar',
+        url: "https://scholar.google.com/citations?user=puTfX0YAAAAJ&hl=en"
+    },
+    {
         name: 'NCTM 2024 Slides',
         url: 'https://drive.google.com/file/d/1M-FKHRamZ1B37iuWBD4dW4THOj4NL7Yn/view'
+    },
+    {
+        name: 'PME 2025 Report',
+        url: 'https://drive.google.com/file/u/0/d/1f7shMBkvRftsQ0OJ128mBRw1HB8p2iJU/view?usp=drivesdk&pli=1'
     },
 ]
