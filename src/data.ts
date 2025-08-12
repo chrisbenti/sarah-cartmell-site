@@ -30,7 +30,7 @@ export const LINK_DATA: { name: string; url: string }[] = [
         url: 'https://drive.google.com/file/d/1M-FKHRamZ1B37iuWBD4dW4THOj4NL7Yn/view'
     },
     {
-        name: 'PME 2025 Report',
+        name: 'PME 2025 Research Report',
         url: 'https://drive.google.com/file/u/0/d/1f7shMBkvRftsQ0OJ128mBRw1HB8p2iJU/view?usp=drivesdk&pli=1'
     },
 ]
