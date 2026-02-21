@@ -24,7 +24,7 @@ export const LINK_DATA: { name: string; url: string }[] = [
     },
     {
         name: 'NCTM 2024 Slides',
-        url: 'https://drive.google.com/file/d/1M-FKHRamZ1B37iuWBD4THOj4NL7Yn/view',
+        url: 'https://drive.google.com/file/d/1M-FKHRamZ1B37iuWBD4dW4THOj4NL7Yn/view?usp=sharing',
     },
     {
         name: 'PME 2025 Research Report',
