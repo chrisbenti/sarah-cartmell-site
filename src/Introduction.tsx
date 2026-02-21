@@ -1,10 +1,19 @@
 import { css } from '@emotion/css'
-import ProgressiveImage from '@dipakshiroya/react-progressive-image'
 import photo from './assets/sarah.jpg'
+import lowRezPhoto from './assets/sarah-low-rez.jpg'
 import { BIO, DESCRIPTION, NAME } from './data'
-import { FONT_SIZE_XL, FONT_SIZE_LG, FONT_SIZE_MD, SMALL_SCREEN_SIZE, PRIMARY_COLOR } from './constants'
+import {
+    FONT_SIZE_XL,
+    FONT_SIZE_LG,
+    FONT_SIZE_MD,
+    SMALL_SCREEN_SIZE,
+    PRIMARY_COLOR,
+} from './constants'
+import { useState } from 'react'
 
 export const Introduction: React.FC = () => {
+    const [lowRezLoaded, setLowRezLoaded] = useState(false)
+    const [highRezLoaded, setHighRezLoaded] = useState(false)
     return (
         <div
             className={css({
@@ -32,14 +41,28 @@ export const Introduction: React.FC = () => {
                     },
                 })}
             >
-                <ProgressiveImage
-                    src={photo} // High-resolution image
-                    placeholderSrc="/assets/sarah-low-rez.jpg" // Low-resolution placeholder
-                    alt="Sarah Cartmell"
-                    // Styles are now applied to the wrapper, and potentially inherited.
-                    // If ProgressiveImage does not inherit, we might need to pass styles down.
-                    // For now, let's assume it inherits or handles internal image styling.
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Ensure image fills the wrapper
+                <img
+                    src={lowRezPhoto}
+                    alt="Low resolution placeholder"
+                    onLoad={() => setLowRezLoaded(true)}
+                    style={{
+                        display: lowRezLoaded && !highRezLoaded ? '' : 'none',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                    }}
+                />
+                {/* Preload low-res image */}
+                <img
+                    src={photo}
+                    alt="High resolution image"
+                    style={{
+                        display: highRezLoaded ? '' : 'none',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                    }}
+                    onLoad={() => setHighRezLoaded(true)}
                 />
             </div>
             <div
@@ -77,7 +100,6 @@ export const Introduction: React.FC = () => {
                     className={css({
                         fontSize: FONT_SIZE_MD,
                         lineHeight: '1.6', // Increased line height for readability
-
                     })}
                 >
                     {BIO}
