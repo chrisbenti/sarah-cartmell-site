@@ -39,7 +39,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #F5F5F5; /* BACKGROUND_COLOR */
+  color: #333333; /* TEXT_COLOR */
 }
 ol, ul {
 	list-style: none;

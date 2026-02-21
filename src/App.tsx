@@ -9,12 +9,13 @@ function App() {
         <div
             className={css(`
                 min-height: 100svh;
-                min-height: -webkit-fill-available
+                min-height: -webkit-fill-available;
+                width: 100vw;
+                overflow-x: hidden; /* Prevent horizontal scroll */
                 
-                max-width: 100vw;
-                overflow-y: hidden;
-
-                display:flex;
+                display: flex;
+                justify-content: center; /* Center content horizontally */
+                align-items: center; /* Center content vertically */
             `)}
         >
             <div
@@ -22,18 +23,20 @@ function App() {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '2em',
-                    maxWidth: '800px',
-                    padding: '2em',
-                    margin: 'auto',
+                    gap: '2.5em',
+                    maxWidth: '800px', // Adjusted max-width for a single column
+                    width: '100%',
+                    padding: '2.5em',
+                    margin: 'auto', // Center the container
+                    boxSizing: 'border-box',
                     [`@media (max-width: ${SMALL_SCREEN_SIZE})`]: {
                         padding: '4em 2em',
                     },
                 })}
             >
                 <Introduction />
-                <Social />
                 <Links />
+                <Social /> {/* Moved Social to the bottom */}
             </div>
         </div>
     )
