@@ -7,6 +7,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Dark mode variables */
+.dark {
+  --background-color: #1a1a1a; /* Dark background */
+  --text-color: #e0e0e0; /* Light text */
+  --link-color: #90caf9; /* Light blue for links in dark mode */
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -41,8 +47,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1.5;
   text-align: center;
-  background-color: #F5F5F5; /* BACKGROUND_COLOR */
-  color: #333333; /* TEXT_COLOR */
+  background-color: var(--background-color, #F5F5F5); /* Use variable, fallback to original */
+  color: var(--text-color, #333333); /* Use variable, fallback to original */
 }
 ol, ul {
 	list-style: none;

@@ -3,8 +3,20 @@ import { Links } from './Links'
 import { Introduction } from './Introduction'
 import { Social } from './Social'
 import { SMALL_SCREEN_SIZE } from './constants'
+import { useTheme } from './contexts/ThemeContext'
+import { useEffect } from 'react'
 
 function App() {
+    const { theme } = useTheme()
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [theme])
+
     return (
         <div
             className={css(`

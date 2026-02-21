@@ -54,7 +54,7 @@ export const Introduction: React.FC = () => {
                     className={css({
                         fontSize: FONT_SIZE_XL,
                         fontWeight: '700', // Slightly less bold for academic vibe
-                        color: TEXT_COLOR, // Use TEXT_COLOR for name
+                        color: 'var(--text-color)', // Use CSS variable for theme-dependent color
                         [`@media (max-width: ${SMALL_SCREEN_SIZE})`]: {
                             fontSize: FONT_SIZE_LG, // Use LG for small screens
                         },
