@@ -2,7 +2,7 @@ import { css } from '@emotion/css'
 import ProgressiveImage from '@dipakshiroya/react-progressive-image'
 import photo from './assets/sarah.jpg'
 import { BIO, DESCRIPTION, NAME } from './data'
-import { FONT_SIZE_XL, FONT_SIZE_LG, FONT_SIZE_MD, SMALL_SCREEN_SIZE, PRIMARY_COLOR, TEXT_COLOR } from './constants'
+import { FONT_SIZE_XL, FONT_SIZE_LG, FONT_SIZE_MD, SMALL_SCREEN_SIZE, PRIMARY_COLOR } from './constants'
 
 export const Introduction: React.FC = () => {
     return (
