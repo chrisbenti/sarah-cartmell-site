@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@dipakshiroya/react-progressive-image':
+        specifier: ^0.1.7
+        version: 0.1.7(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@emotion/css':
         specifier: ^11.13.5
         version: 11.13.5
@@ -149,6 +152,12 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
+
+  '@dipakshiroya/react-progressive-image@0.1.7':
+    resolution: {integrity: sha512-1xBFE/Fdo6r8Jd+WpOAawJVMMtSv4OPFV4zrr9ReKTr6an/kfTnhvcIyUWpw510DDYZqIl4E4E2cy6Cek0qFVA==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
 
   '@emotion/babel-plugin@11.13.5':
     resolution: {integrity: sha512-pxHCpT2ex+0q+HH91/zsdHkw/lXd468DIN2zvfvLtPKLLMo6gQj7oLObq8PhkrxOZb/gGCq03S3Z7PDhS8pduQ==}
@@ -1539,6 +1548,11 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
+
+  '@dipakshiroya/react-progressive-image@0.1.7(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@emotion/babel-plugin@11.13.5':
     dependencies:

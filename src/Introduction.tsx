@@ -1,12 +1,10 @@
-import { useState } from 'react'
 import { css } from '@emotion/css'
+import ProgressiveImage from '@dipakshiroya/react-progressive-image'
 import photo from './assets/sarah.jpg'
 import { BIO, DESCRIPTION, NAME } from './data'
 import { FONT_SIZE_XL, FONT_SIZE_LG, FONT_SIZE_MD, SMALL_SCREEN_SIZE, PRIMARY_COLOR, TEXT_COLOR } from './constants'
 
 export const Introduction: React.FC = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
-
     return (
         <div
             className={css({
@@ -17,24 +15,33 @@ export const Introduction: React.FC = () => {
                 width: '100%', // Ensure it takes full width
             })}
         >
-            <img
-                onLoad={() => setIsLoaded(true)}
+            {/* Wrapper div to ensure styles are applied correctly */}
+            <div
                 className={css({
-                    opacity: isLoaded ? 1 : 0, // Initial opacity 0, fades to 1 on load
-                    filter: isLoaded ? 'none' : 'blur(10px)', // Apply blur initially, remove on load
-                    transition: 'opacity 0.5s ease-in-out, filter 0.5s ease-in-out', // Smooth transition for opacity and filter
                     width: '300px', // Changed from maxWidth to width for static width
                     height: '300px', // Added static height
                     borderRadius: '50%',
                     border: `2px solid ${PRIMARY_COLOR}`,
+                    display: 'flex', // Use flex to center the image if needed, though ProgressiveImage handles it
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    overflow: 'hidden', // Ensure border-radius clips the image
                     [`@media (max-width: ${SMALL_SCREEN_SIZE})`]: {
                         width: '200px', // Changed from maxWidth to width for static width on mobile
                         height: '200px', // Match height to width for aspect ratio
                     },
                 })}
-                src={photo}
-                alt="Sarah Cartmell"
-            />
+            >
+                <ProgressiveImage
+                    src={photo} // High-resolution image
+                    placeholder="/assets/sarah-low-rez.jpg" // Low-resolution placeholder
+                    alt="Sarah Cartmell"
+                    // Styles are now applied to the wrapper, and potentially inherited.
+                    // If ProgressiveImage does not inherit, we might need to pass styles down.
+                    // For now, let's assume it inherits or handles internal image styling.
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Ensure image fills the wrapper
+                />
+            </div>
             <div
                 className={css({
                     display: 'flex',
