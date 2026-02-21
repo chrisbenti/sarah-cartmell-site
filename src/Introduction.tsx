@@ -34,7 +34,7 @@ export const Introduction: React.FC = () => {
             >
                 <ProgressiveImage
                     src={photo} // High-resolution image
-                    placeholder="/assets/sarah-low-rez.jpg" // Low-resolution placeholder
+                    placeholderSrc="/assets/sarah-low-rez.jpg" // Low-resolution placeholder
                     alt="Sarah Cartmell"
                     // Styles are now applied to the wrapper, and potentially inherited.
                     // If ProgressiveImage does not inherit, we might need to pass styles down.
