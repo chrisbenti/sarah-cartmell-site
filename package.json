@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@emotion/css": "^11.13.5",
+        "@swc/plugin-emotion": "^14.7.0",
         "knip": "^6.1.1",
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
