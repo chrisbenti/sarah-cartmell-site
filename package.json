@@ -6,21 +6,19 @@
     "scripts": {
         "dev": "vite --host 0.0.0.0",
         "build": "tsc -b && vite build",
-        "lint": "eslint .",
+        "lint": "eslint . && knip",
         "preview": "vite preview",
         "format": "pnpm prettier --write ."
     },
     "dependencies": {
         "@emotion/css": "^11.13.5",
-        "@emotion/react": "^11.14.0",
-        "@swc/plugin-emotion": "^14.6.0",
+        "knip": "^6.1.1",
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
         "react-social-icons": "^6.25.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.3",
-        "@squoosh/cli": "^0.7.3",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
         "@vitejs/plugin-react-swc": "^4.2.3",
