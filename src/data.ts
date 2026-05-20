@@ -1,7 +1,7 @@
 export const NAME = 'Sarah Cartmell'
 export const DESCRIPTION =
-    'PhD Student, Mathematics Education @ Rutgers University'
-export const BIO = `Sarah Cartmell, MEd, is a doctoral student in Mathematics Education at Rutgers University. Her research focuses on innovative approaches to fostering mathematical understanding, particularly among students from diverse backgrounds, through engaging and collaborative problem-solving tasks. With seven years of experience teaching middle school mathematics, she is dedicated to exploring and developing equitable learning environments that promote deep mathematical thinking.`
+    'PhD, Mathematics Education @ Rutgers University'
+export const BIO = `Sarah Cartmell, PhD, is a mathematics education researcher who earned her doctorate from the Rutgers Graduate School of Education. Her research focuses on innovative approaches to fostering mathematical understanding, particularly among students from diverse backgrounds, through engaging and collaborative problem-solving tasks. With seven years of experience teaching middle school mathematics, she is dedicated to exploring and developing equitable learning environments that promote deep mathematical thinking.`
 
 export const SOCIAL_LINKS = [
     'scartmell94@gmail.com',
