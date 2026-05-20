@@ -6,7 +6,6 @@ export const BIO = `Sarah Cartmell, PhD, is a mathematics education researcher w
 export const SOCIAL_LINKS = [
     'scartmell94@gmail.com',
     'https://www.linkedin.com/in/sarah-cartmell-6774a6114/',
-    'https://www.instagram.com/Mrs_Cartmell/',
 ]
 
 export const LINK_DATA: { name: string; url: string }[] = [
